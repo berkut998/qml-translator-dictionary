@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Assets/6ba4740df15f169d3d01b297221eefcd.jpg</file>
+    </qresource>
+</RCC>
