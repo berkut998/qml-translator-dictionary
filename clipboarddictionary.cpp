@@ -1,14 +1,21 @@
 #include "clipboarddictionary.h"
-
+#include <QHotkey>
 ClipBoardDictionary::ClipBoardDictionary(QObject *parent) : QObject(parent)
 {
     clipboard = QGuiApplication::clipboard();
     QObject::connect(clipboard,SIGNAL(dataChanged()),this,SLOT(setData()));
+    shortCut = new QHotkey(QKeySequence("ctrl+T"), true, this);//The hotkey will be automatically registered
+    qDebug() << "Platform is supported" << clipboard->supportsFindBuffer();
+    qDebug() << "Is Registered: " << shortCut->isRegistered();
+    if (shortCut != NULL)
+      QObject::connect(shortCut, SIGNAL(activated()), this, SLOT(copyToBuffer()));
+
+
 }
 
 void ClipBoardDictionary::copyToBuffer()
 {
-    setWord(clipboard->text(clipboard->Selection));
+    setWord(clipboard->text(clipboard->Clipboard));
 }
 
 void ClipBoardDictionary::AddToDictionary(QString word)

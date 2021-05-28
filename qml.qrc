@@ -2,5 +2,14 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Assets/6ba4740df15f169d3d01b297221eefcd.jpg</file>
+        <file>Assets/translate_black_24dp.svg</file>
+        <file>Assets/swap_horiz_black_24dp.svg</file>
+        <file>Assets/menu_black_24dp.svg</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>dictionaryPage.qml</file>
+        <file>translatorPage.qml</file>
+        <file>settingPage.qml</file>
+        <file>Assets/arrow_back_black_24dp.svg</file>
+        <file>Assets/kisspng-translation-google-translate-computer-icons-micros-language-5abddd208a8e67.4592666915223923525675.png</file>
     </qresource>
 </RCC>

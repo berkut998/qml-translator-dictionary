@@ -24,7 +24,7 @@ SystemTray::SystemTray(QObject *parent) : QObject(parent)
      * */
     trayIcon = new QSystemTrayIcon();
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setIcon(QIcon("qrc:/Assets/6ba4740df15f169d3d01b297221eefcd.jpg"));
+    trayIcon->setIcon(QIcon(":/Assets/kisspng-translation-google-translate-computer-icons-micros-language-5abddd208a8e67.4592666915223923525675.png"));
     trayIcon->show();
     trayIcon->setToolTip("Tray Program" "\n"
                          "Работа со сворачиванием программы трей");
@@ -53,4 +53,9 @@ void SystemTray::iconActivated(QSystemTrayIcon::ActivationReason reason)
 void SystemTray::hideIconTray()
 {
     trayIcon->hide();
+}
+
+void SystemTray::showMessage(QString message)
+{
+    trayIcon->showMessage("Translate",message,trayIcon->icon(),1000);
 }

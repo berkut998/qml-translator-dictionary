@@ -1,6 +1,7 @@
-QT += quick gui quickwidgets widgets
 
 TEMPLATE = app
+
+QT += quick gui quickwidgets widgets qml sql network svg core xml quickcontrols2
 
 CONFIG += c++11
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -9,10 +10,13 @@ CONFIG += c++11
 
 SOURCES += \
         clipboarddictionary.cpp \
+        http_Translator.cpp \
         main.cpp \
+        sqldictionary.cpp \
         systemtray.cpp
 
 RESOURCES += qml.qrc
+include(A:\Repository\dictionary\QHotkey-1.4.2\qhotkey.pri)
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -26,6 +30,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    IClipBoardDictionary.h \
     clipboarddictionary.h \
+    http_Translator.h \
+    sqldictionary.h \
     systemtray.h
+
+DISTFILES +=
+

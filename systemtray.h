@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QAction>
 #include <QSystemTrayIcon>
-
+#include <QMessageBox>
 class SystemTray : public QObject
 {
     Q_OBJECT
@@ -25,10 +25,12 @@ private slots:
 
 public slots:
     void hideIconTray();
+    void showMessage (QString message);
 
 private:
     /* Объявляем объект будущей иконки приложения для трея */
     QSystemTrayIcon         * trayIcon;
+
 };
 
 #endif // SYSTEMTRAY_H
