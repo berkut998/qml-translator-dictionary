@@ -18,16 +18,6 @@ void ClipBoardDictionary::copyToBuffer()
     setWord(clipboard->text(clipboard->Clipboard));
 }
 
-void ClipBoardDictionary::AddToDictionary(QString word)
-{
-
-}
-
-void ClipBoardDictionary::restoreClipBoard()
-{
- // clipboard->setText(backUpText);
-}
-
 QString ClipBoardDictionary::getWord()
 {
   return p_word;

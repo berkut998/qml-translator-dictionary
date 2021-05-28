@@ -12,9 +12,7 @@ class ClipBoardDictionary : public QObject
     Q_PROPERTY(QString word READ getWord WRITE setWord NOTIFY wordChanged)
     Q_OBJECT
 public:
-    explicit ClipBoardDictionary(QObject *parent = nullptr);
-    void AddToDictionary(QString word);
-    void restoreClipBoard();
+    explicit ClipBoardDictionary(QObject *parent = nullptr);;
     QString getWord();
     void setWord(QString word);
     QHotkey *shortCut;
